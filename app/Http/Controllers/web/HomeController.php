@@ -54,6 +54,5 @@ class HomeController extends Controller
         PurchaseTransaction::create($data);
 
         return redirect()->route('index')->with('success', 'Product has been buy');
-
     }
 }

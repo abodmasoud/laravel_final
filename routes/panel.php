@@ -20,8 +20,9 @@ Route::prefix('panel')->middleware('guest:user')->group(function (){
     Route::post('login', [\App\Http\Controllers\panel\auth\AuthController::class, 'login'])->name('login');
 });
 
-
-Route::prefix('panel')->middleware('auth:user')->group(function (){
+//عملت تعليق عشان ما عملت تشفير لسا 
+// Route::prefix('panel')->middleware('auth:user')->group(function (){
+Route::prefix('panel')->group(function (){
 
     Route::get('logout', [\App\Http\Controllers\panel\auth\AuthController::class, 'logout'])->name('logout');
 
